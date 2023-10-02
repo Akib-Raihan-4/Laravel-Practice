@@ -40,3 +40,9 @@ Route::get('giveName/{name?}', function(string $name = null){
 // There can be more like "whereAplhaNumeric('name of the parameter given');"
 // and then to specify like it should be movie/song here "whereIn('id', ['movie','song']);"
 // can use regular expression also "where('id', [0-9]+);"
+
+
+// Named Route
+Route::get('/page/about-us', function () {
+    return view('about');
+})-> name('about');
