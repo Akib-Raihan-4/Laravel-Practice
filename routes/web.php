@@ -43,6 +43,26 @@ Route::get('giveName/{name?}', function(string $name = null){
 
 
 // Named Route
-Route::get('/page/about-us', function () {
+Route::get('test', function () {
     return view('about');
 })-> name('about');
+
+
+// If I want to update the about page from page/about, I can do this, so that even if anyone goes
+// to /page/about it will redirect to /test page which is the update the page url
+Route::redirect('/page/about', '/test', 301);
+
+
+// Route Group is used so that I don't need to write /page/grouping, /page/someOtherName again and
+// again
+Route::prefix('page')->group(function(){
+    Route::get('/grouping', function () {
+        return view('group');
+    })->name('group');
+});
+
+
+// I can make a custom page for 404 error, if a user put different url.
+Route::fallback(function(){
+    return "<h1>Page Not Found</h1>";
+});

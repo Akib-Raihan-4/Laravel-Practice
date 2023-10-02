@@ -4,3 +4,5 @@
 </p>
 
 <p>Go to about us: <a href={{ route('about') }}> Here</a></p>
+
+<a href={{ route('group') }}>Group</a>
