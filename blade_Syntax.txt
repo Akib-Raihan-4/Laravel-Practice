@@ -1,0 +1,63 @@
+<?php
+echo hello ?>
+
+---for blade template:
+ {{ "hello" }}
+
+<?php
+echo "<h1> Hello </h1>" ?>
+
+{!! "<h1>Hello</h1>" !!}
+
+--if I want to code in php in blade I should use:
+
+@php
+@endphp
+
+---instead of:
+
+<?php
+?>
+
+---Conditions in blade:
+
+@if(conditon)
+
+@elseif(condition)
+
+@else
+
+@endif ==> this should end the if condition
+
+---For break statement in blade:
+
+@break
+
+---For isset and empty:
+
+@isset($ records)
+@endisset
+
+@empty($records)
+@endempty
+
+---Loops in blade
+@for($i= 0; $i<10; $i++)
+    The current value is {{ $i }}
+@endfor
+
+@while(condition)
+    <p>Loop Statement</p>
+@endwhile
+
+---loop in array:
+@foreach($users as $user)
+    <p>This is user{{ $user }}</p>
+@endforeach
+
+---condition check in 4th loop
+@forelse($users as $user)
+    <li>{{ $user->name }}</li>
+@empty
+    <p>No Users </p>
+@endforelse
