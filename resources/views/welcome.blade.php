@@ -4,5 +4,15 @@
 </p>
 
 <p>Go to about us: <a href={{ route('about') }}> Here</a></p>
+<p><a href={{ route('group') }}>Group</a></p>
 
-<a href={{ route('group') }}>Group</a>
+
+{{-- printing number --}}
+{{ 5+1 }}
+<br><br>
+
+{{ "Hello World" }}
+<br><br>
+
+{{-- There cannot be any spaces between the curly bracket and !! "{!! "<></>" !!}" --}}
+{!! "<h1>Hello World</h1>" !!}
