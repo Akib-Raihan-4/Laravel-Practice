@@ -16,3 +16,8 @@
 
 {{-- There cannot be any spaces between the curly bracket and !! "{!! "<></>" !!}" --}}
 {!! "<h1>Hello World</h1>" !!}
+
+
+{{-- For javaScript Code --}}
+
+{!! "<script>alert('Alert Box')</script>" !!}
