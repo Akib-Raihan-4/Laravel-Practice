@@ -66,3 +66,15 @@ Route::prefix('page')->group(function(){
 Route::fallback(function(){
     return "<h1>Page Not Found</h1>";
 });
+
+
+// This route is used for practicing @include syntax of blade template
+
+// Route::get('/first', function () {
+//     return view('first');
+// });
+
+// Route::get('/second', function () {
+//     return view('second');
+// });
+

@@ -63,3 +63,24 @@
 
     @endforeach
 </ul>
+
+
+
+{{-- @include directives are used here --}}
+{{-- Sending values to second page --}}
+
+@include('pages.first', ['name' => 'Akib Raihan'])
+<h1>Look up and down</h1>
+@include('pages.second')
+
+
+{{-- Sending array of names --}}
+
+@php
+    $names = ["Akib", "Dorothi", "Himel", "Sigda"]
+@endphp
+
+@include('pages.first', ['names' => $names])
+
+{{-- use "@includeif() if there is a possibility that the page is not present" --}}
+{{-- use "@includeWhen(condition Value,'viewfile', ['status'=> 'Hello'])" if there is a conditon, like if the condition is fulfilled then they will include the viewfile --}}
