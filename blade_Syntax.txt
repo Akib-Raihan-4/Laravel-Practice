@@ -61,3 +61,10 @@ echo "<h1> Hello </h1>" ?>
 @empty
     <p>No Users </p>
 @endforelse
+
+
+---Blade Template Main Directives
+@include
+@section
+@extend
+@yield
