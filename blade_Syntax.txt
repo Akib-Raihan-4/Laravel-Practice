@@ -68,3 +68,10 @@ echo "<h1> Hello </h1>" ?>
 @section
 @extend
 @yield
+
+
+---Template inheritnace
+
+We use layout.blade.php for storing the layout of the webpage, so that we don't need to use
+include() in every file.
+
