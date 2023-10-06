@@ -74,4 +74,7 @@ echo "<h1> Hello </h1>" ?>
 
 We use layout.blade.php for storing the layout of the webpage, so that we don't need to use
 include() in every file.
+In the layout we can use @yield('content') for dynamic content.
+Use @extend('layout') for inherting the layout design in a page.
+Use @section('content') to show the dynamic content you want to show.
 
